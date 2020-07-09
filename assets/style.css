@@ -30,8 +30,8 @@ html{
 	padding:80px;
 }
 .bottom {
-	overflow: hidden;
-	position: sticky;
+	
+	position: fixed;
 	background-color: #262626;
 	bottom: 0;
 	color: #fff;
