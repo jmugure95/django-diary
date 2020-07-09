@@ -1,0 +1,32 @@
+
+{% extends 'base.html' %}
+{% block content %}
+    <title>My Diary</title>
+</head>
+<body>
+	<header>
+		<div class="top-nav">
+			<p class="intro-diary">Diary</p>
+			
+		</div>
+	</header>
+
+	<div class="container justify-content-center">
+	<div class="new-entry">
+		<p><a href="{%url 'entry:entr' %}"> Add an Entry </a></p>
+	</div>
+		{% for entry in entries %}
+			<div class="panel panel-default">
+			  <div class="panel-heading">{{ entry.name }}</div>
+			  <div class="panel-body">{{ entry.snippet }}</div>
+			</div>
+			{% endfor %}
+	</div>
+
+	<footer>
+		<div class="bottom">
+			<p>&copy; My Diary </p>
+			<p>Copyright (c) 2020 All rights reserved</p>
+		</div>
+	</footer>
+{% endblock %}
